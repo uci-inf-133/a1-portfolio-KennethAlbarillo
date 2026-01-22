@@ -2,23 +2,292 @@
 <html lang="en">
 
 <!--
-WRITTEN BY: Your name here
-EMAIL: Your email here
+WRITTEN BY: Kenneth Albarillo
+EMAIL: kalbaril@uci.edu
 -->
+
+<!--"http://validator.w3.org/check?uri=referer"-->
 
 <head>
   <meta charset="utf-8">
-  <meta name="author" content="Your name here">
-  <meta name="description" content="description of your page">
-   <!-- you would link to an external stylesheet here! -->
-   <!-- you would also link to Bootstrap here! -->
-  <title>title here</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kenneth Albarillo">
+  <meta name="description" content="This is my digital profolio">
+  <!-- you would link to an external stylesheet here! -->
+  <link rel = "stylesheet" href = "style.css">
+  <!-- you would also link to Bootstrap here! -->
+  <script src="menu-script.js"></script>
+  <title>Kenneth Tapic Albarillo</title>
 </head>
+
 <body>
-  <p>
-    <a href="http://validator.w3.org/check?uri=referer">
-       W3C validator
-    </a>
-  </p>
+
+  <div class = "my-menu">
+    <b class = "menu-title">k . t . a</b>
+    <a href = "#contact">contact</a>
+    <a class = "menu-top-button active" href = "#home">home</a>
+  </div>
+
+  <section>
+    <div class="home-page">
+      <img src="./my-photos/ocean-pic.jpg" alt = "Ocean-view picture of Kenneth Albarillo">
+      <div class="text-overlay-a">
+        <p class="overlay-a">hi, my name is kenneth tapic albarillo</p>
+      </div>
+      <div class="text-overlay-b">
+        <p class="overlay-b">i am a:<br>- programmer<br>- photographer<br>- musician</p>
+      </div>
+      <div class="text-overlay-c">
+        <p class="overlay-c">(more info below)</p>
+      </div>
+    </div>
+
+    <div class = "biography">
+      <div class = "bio-menu">
+        <a class = "active" href = "#about-me">about-me</a>
+        <a href = "#projects">projects</a>
+        <a href = "#photos">photos</a>
+        <a href = "#band">band</a>
+      </div>
+
+      <div class = "main-content">
+        <section class = "bio-sect active" id="about-me">
+          <h1>About Me</h1>
+          <p>
+            From programming applications for personal use to playing music for friends 
+            and my local college community, I utilize my skills and knowledge to enhance 
+            my way of living. Though I have strong confidence in my skills and execution 
+            of my plans, there are still certain aspects of my abilities that I feel the 
+            need to work on. Despite knowing my faults, I strive to grow and learn new 
+            concepts and ideas that will better my current capabilities. To highlight 
+            my strengths, please continue exploring my portfolio and form your own 
+            impression of me.
+          </p>
+        <hr>
+        </section>
+
+        <section class = "bio-sect" id = "projects">
+          <h1>Projects</h1>
+          <p class= "project-intro-sect">
+            These are programmed-based projects that, for the most part, are primarily 
+            made for personal amusement and curiosity. Two are group projects, one utilizing 
+            Arduino and the other being Full-Stack based. The rest show my knowledge with 
+            Python, but I do have intermediate experience with C, C++, HTML, CSS, JavaScript, 
+            and a bit of Assembly.
+          </p>
+          <hr>
+          <h1>CodeBytes | Full-Stack Group Project </h1>
+          <div class = "project-sect">
+            <section class = "carousel" id = "image-carousel" aria-label="A carousel of images relating to CodeBytes">
+                <div class = "carousel-base">
+                  <ul class = "carousel-list">
+                    <li class = "carousel-slide active">
+                      <img src = "./my-gifs/codebytes-showcase.gif" alt="A Gif showing a showcase of the log-in process for CodeBytes.">
+                    </li>
+                    <li class = "carousel-slide">
+                      <img src = "./my-photos/goal-slide.png" alt="An image showing the Main Objective of the Codebytes: To develop accessible, gamified learning platform for beginners web developers.">
+                    </li>
+                    <li class = "carousel-slide">
+                      <img src = "./my-photos/solution-slide.png" alt="Solution to the goal: 1 Make lessons short, 2 Gamify Experience, 3 Make it as accessible as possible">
+                    </li>
+                    <li class = "carousel-slide">
+                      <img src = "./my-photos/process-codebyte.png" alt="Process of creating CodeByte. Define, Build, Ship.">
+                    </li>
+                    <li class = "carousel-slide">
+                      <img src = "./my-photos/tech-stack.png" alt="Tools utilized in creating CodeByte. NodeJS, React, PostgreSQL, Docker, Tailwind, and TypeScript">
+                    </li>
+                    <li class = "carousel-slide">
+                      <img src = "./my-photos/thank-you-codebyte.png" alt="A thank you image showing the CodeByte Bunny Mascot">
+                    </li>
+                  </ul>
+                </div>
+              <div class = "image-controls" id = "codebytes">
+                <button class = "carousel-left" aria-label="Left carousel button" id = "codebytes">‹</button>
+                <div class = "carousel-dots" id = "codebytes"></div>
+                <button class = "carousel-right" aria-label="Right carousel button" id = "codebytes">›</button>
+              </div>
+            </section>
+            <div class="project-description">
+              <p>
+                This project was to show a possible website that can help users who aren’t familiar with programming 
+                in HTML or any other coding language be exposed to it with this language-teaching application called 
+                CodeBytes. Taking each step bit-by-bit! The project is currently not on going, but it was my first 
+                exposure to HTML and CSS, with most of my part of the project going into the UI/UX implementation 
+                (from design to code).
+              </p>
+            </div>
+          </div>
+
+          <h1>Kamay Guys | Grabbing-Robot utilizing Arduino</h1>
+          <div class = "project-sect">
+            <section class = "carousel" id = "image-carousel" aria-label="A carousel of images relating to Grabbing Robot">
+              <div class = "carousel-base">
+                <ul class = "carousel-list">
+                  <li class = "carousel-slide active">
+                    <img src="./my-photos/kamay-guys-logo.png" alt = "Image of Kamay Guys Logo. My group for rover project.">
+                  </li>
+                  <li class = "carousel-slide">
+                    <img src="./my-photos/glove-me-kamay-guys.png" alt = "Image of Kenneth with bluetooth glove controller.">
+                  </li>
+                  <li class = "carousel-slide active">
+                    <img src="./my-photos/group-photo-kamay-guys.png" alt = "Photo of entire Kamay Guys team with the blue-headed rover on the floor.">
+                  </li>
+                  <li class = "carousel-slide active">
+                    <img src="./my-gifs/happy-kamay-guys.gif" alt = "Group Members dancing in excitement as the rover moves.">
+                  </li>
+                  <li class = "carousel-slide">
+                    <img src="./my-photos/flex-sensor-implementation.png" alt = "Flex sensor implementation. Glove controller works on the angle of the resistor.">
+                  </li>
+                  <li class = "carousel-slide">
+                    <img src="./my-photos/controller-implementation.png" alt = "Graph of how the controller is wired to the rover through bluetooth.">
+                  </li>
+                </ul>
+              </div>
+              <div class = "image-controls" id = "kamay-guys">
+                <button class = "carousel-left" aria-label="Left carousel button" id = "kamay-guys">‹</button>
+                <div class = "carousel-dots" id = "kamay-guys"></div>
+                <button class = "carousel-right" aria-label="Right carousel button" id = "kamay-guys">›</button>
+              </div>
+            </section>
+            <div class="project-description">
+              <p>
+                Kamay Guys is the name of the group that I was with when creating 
+                this rover that grabs blocks. The control of the rover was through 
+                bluetooth that is finger-based. The glove-controller has flexible 
+                resistors (flex-sensors) that provides bytes to the master and 
+                slave bluetooth modules that dictate the movement of the rover. 
+                My part of the project was implementing the flex-sensor 
+                implementation (from user-input to value).
+              </p>
+            </div>
+          </div>
+
+          <div class = "python-projects">
+          </div>
+        </section>
+
+        <section class = "bio-sect" id = "photos">
+          <h1>Photos</h1>
+          <p>
+            The photos displayed below are editied, taken, or were instructed to be 
+            taken as the way they are by me. Most of the photos taken are from an 
+            iPhone 14 Pro Max, but a handful were taken with a Sony A7. Though these
+            photos aren't the main aspect of this profolio, it's one of the many 
+            passions that I have outside of coding and I wanted to show my passion 
+            of the art form (with me controlling the leds). Click on any image to 
+            fullscreen and click on it again to exit out.
+          </p>
+          <hr>
+          <div class = "cell-gallery">
+            <img src="./photo-gallery/parrallel-fiend.JPG" id="fs-img" onclick="toggleFS(this)" alt="Parrallel-structure photo.">
+            <img src="./photo-gallery/and-pose.JPG" id="fs-img" onclick="toggleFS(this)" alt="Group of people posing in front of a LED sign.">
+            <img src="./photo-gallery/average-day.JPG" id="fs-img" onclick="toggleFS(this)" alt="Casual pose of Kenneth Albarillo.">
+            <img src="./photo-gallery/m-1.JPG" id="fs-img" onclick="toggleFS(this)" alt="Dramatic Angle of a person with bolder in a background.">
+            <img src="./photo-gallery/feelin-stumped.JPG" id="fs-img" onclick="toggleFS(this)" alt="Hill side picture with Kenneth Albarillo sitting on a wooden stump.">
+            <img src="./photo-gallery/cave-pic.JPG" id="fs-img" onclick="toggleFS(this)" alt="Cave picture with Kenneth Albarillo posing within entrance.">
+            <img src="./photo-gallery/steady-day.jpg" id="fs-img" onclick="toggleFS(this)" alt="Two people laying back on their cars with a sun in the background.">
+            <img src="./photo-gallery/generic-car-pic.JPG" id="fs-img" onclick="toggleFS(this)" alt="Photo of a modified Camery.">
+            <img src="./photo-gallery/the-lex.jpg" id="fs-img" onclick="toggleFS(this)" alt="Black vehicle with sun in the background.">
+            <img src="./photo-gallery/the-hills.JPG" id="fs-img" onclick="toggleFS(this)" alt="Scenic photo of beautiful green hills.">
+            <img src="./photo-gallery/the-stars.png" id="fs-img" onclick="toggleFS(this)" alt="An editied Monotone Photo of Kenneth Albarillo.">
+          </div>
+        </section>
+
+        <section class = "bio-sect" id = "band">
+          <h1>The Mix</h1>
+          <p>
+            Since Feburary 2025, my band and I have existed 
+            and played music for friends, student clubs, and 
+            student-ran events nearby UCI. We're a cover band 
+            (for now) and we try to learn any songs people 
+            reccommend to us. The genre that we primarily 
+            play is pop music, and we try our best to make our 
+            cover sound as close as it can with the current 
+            instrument that we have. With that being said 
+            here's the wonderful individuals that make up
+            The Mix!
+          </p>
+          <hr>
+          <div class = 'band-layout'>
+            <h1>Hazel | Lead Singer</h1>
+            <div class = 'member-bio-left'>
+              <img src="./my-photos/lead-singer.JPG" alt="Image of Hazel Kurien singing at a club event on UCI campus.">
+              <p class = "member-text">
+                Utilizing her vocal skills from practicing between her acapella group and free time, Hazel sings in her 
+                own unique way that once you hear her voice you will know that it's her singing. Getting her inspiration 
+                from Michael Jackson and many other artists of the like, she pushes herself to sound great for any performance 
+                and occasion. Her drive to sound perfect is indescribable, but you'll hear her effort, experience, and technique 
+                in her singing.
+              </p>
+            </div>
+            <h1>Derick | Lead Guitarist</h1>
+            <div class = 'member-bio-right'>
+              <p>
+                Having a musically inclined father, Derick has been exposed to music at a very young age, playing a variety of 
+                instruments. From the flute, to the guitar, to the easy percussion instruments anyone can play, Derick is multilingual 
+                between multiple instruments and if he really wanted to he could make a solo, indie album. Not only is he gifted in music, 
+                but he’s amenable with film and art. Having a major in film and utilizing his art skills to help him with that major 
+                (drawing out scenes, expressing how characters should feel, etc…) he utilizes all of his skills as much as he can. You could 
+                say he’s a jack of all trades.
+              </p>
+              <img src="./my-photos/lead-guitarist.jpg" alt="Image of Derick Ong on a skateboard while playing the guitar.">
+            </div>
+            <h1>Bianca | Bassist</h1>
+            <div class = 'member-bio-left'>
+              <img src="./my-photos/bassist.JPG" alt="Image of Bianca Carrillo playing her bass at a club event.">
+              <p>
+                Ever since high school, Bianca has been playing the bass with multiple different bands with widely different genres. 
+                From punk, to pop, all the way back to latin rock, Bianca can play the bass to any genre she’s exposed to. Outside of 
+                music, she does charitable acts for the need, volunteering at food shelters and providing it when possible. With 
+                everything that she does, she is truly a one of a kind person that has more special skills than most.
+              </p>
+            </div>
+            <h1>Marcos | Pianist</h1>
+            <div class = 'member-bio-right'>
+              <p>
+                For awhile, Marcos has been playing the piano and has fundamentally understood the instrument so well that he can 
+                basically transfer his music skills to a new instrument and get to an intermediate level with the instrument in days. 
+                His improv, on the spot thinking has always filled the emptiness of our band, making it always feel whole when we play. 
+                Besides his skills in intuition and being able to pick up new skills on the fly, he’s also an aerospace engineer, highlighting 
+                (on occasion) how physics dictate sound, relating it back to music. Marcos is adds feeling to the music we play, so I’m 
+                thankful to have a person like him to be playing with me.
+              </p>
+              <img src="./my-photos/pianist.JPG" alt="Image of Marcos Perez playing the piano at TedxUCI event.">
+            </div>
+            <h1>Kenneth | Drums</h1>
+            <div class = 'member-bio-left'>
+              <img src="./my-photos/drummer.jpg" alt="Image of Kenneth Albarillo head down at an In-n-Out table.">
+              <p>
+                There's no self-righteous way to coat this. I’ve played many songs with this band, and pop music is notoriously known to have 
+                very easy drum rudiments. In comparison to others within the band, my job is to keep the tempo (non-existent with the way we 
+                play) and have everyone be on the same page (works most of the time). Overall, the effort that I need to insert into a song 
+                is not as much as everybody else since I don’t need to worry about notes, just the rhythm and rests throughout the song. 
+                Overall, I enjoy being the drummer since I’m able to play any song on a whim.
+              </p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </section>
+
+  <div class = "contact-page" id="contact">
+    <div class = "contact-header"><h1>contact me through here!</h1></div>
+    <div class = "middle-left">
+      <img src = "./my-photos/LinkedIn_icon.svg.png" alt = "Icon of the LinkedIn Logo.">
+    </div>
+    <div class = "middle-right">
+      <img src = "./my-photos/mail-icon.png" alt = "Icon of an Email.">
+    </div>
+    <div class = "bottom-left">
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/kenneth-albarillo-098218297/">Kenneth Albarillo</a></p>
+    </div>
+    <div class = "bottom-right">
+      <p>Email: <a href="mailto:kennethalbarillo1@gmail.com">kennethalbarillo1@gmail.com</a></p>
+    </div>
+  </div>
+
 </body>
 </html>

@@ -1,0 +1,525 @@
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+}
+
+/* Visually Remove Scroll Bar*/
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/* Top Bar Visuals */
+.my-menu{
+    background-color: #333;
+    overflow : hidden;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.my-menu b.menu-title{
+    font-size: 20px;
+}
+
+.my-menu a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.my-menu b{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.my-menu a:hover {
+    background-color: white;
+    color: black;
+}
+
+.my-menu a.active{
+    background-color: white;
+    color: black;
+}
+
+/* Home-page Visuals */
+
+.home-page{
+    flex-grow: 1;
+
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Courier New', monospace;
+    text-shadow: 2.5px 2px #333;
+    box-sizing: border-box;
+}
+
+.home-page img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+.text-overlay-a{
+    position: absolute;
+    top: 35%;
+    left: 39%;
+    transform: translate(-50%,-50%);
+    padding: 10px;
+}
+
+.text-overlay-b{
+    position: absolute;
+    top: 55%;
+    left: 75%;
+    transform: translate(-50%,-50%);
+    padding: 10px;
+}
+
+.text-overlay-c{
+    position: absolute;
+    top: 80%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    padding: 10px;
+}
+
+.home-page p.overlay-a {
+    font-size: clamp(2rem,1vw,2.5rem);
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    width: 50%;
+}
+
+.home-page p.overlay-b {
+    font-size: clamp(2rem,1vw,2.5rem);
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    width: 110%;
+}
+
+.home-page p.overlay-c {
+    font-size: clamp(2rem,1vw,2.5rem);
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    width: 200%;
+}
+
+/* biography Visuals */
+
+.biography{
+    background-color: #333;
+    color: #fff;
+    padding: clamp(0.5rem, 5vw, 2rem);
+    
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bio-menu{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.bio-menu a{
+    margin-bottom: 20px;
+    margin-right: 100px;
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+}
+
+.bio-menu a.active{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.bio-menu a:hover{
+    text-decoration: underline;
+}
+
+.main-content{
+    position: relative;
+    min-height: 100px;
+}
+
+/* Biography Sections */
+
+.bio-sect{
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 130ch;
+    margin: 0 auto;
+    
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.4s ease;
+}
+
+.bio-sect.active{
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    transition: opacity 0.4 ease;
+}
+
+.bio-sect h1{
+    margin-bottom: 5px;
+    margin-top: 20px;
+    margin-left: clamp(3rem, 3vw, 5rem);
+    font-size: clamp(1.6rem, 4vw, 2rem);
+}
+
+.bio-sect p{
+    margin-top: 0px;
+    margin-left: clamp(3rem, 3vw, 20rem);
+    margin-right: clamp(3rem, 3vw, 16rem);
+    text-indent: clamp(1rem, 3vw, 5rem);
+    line-height: 1.5;
+    font-size: clamp(1rem, 3vw, 1.12rem);
+}
+
+.bio-sect .project-intro-sect{
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+}
+
+/* Project Image Carousel */
+
+.bio-sect .carousel{
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+}
+
+.bio-sect.active .carousel{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    visibility: visible;
+    position: relative;
+    inset: auto;
+}
+
+.carousel-base{
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: 400px; /* Fixed height to prevent overlap from different image ratios */
+}
+
+.carousel-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    transition: tranform 0.4s ease;
+}
+
+li {
+    /* Remove dot on top-right of image */
+    list-style: none;
+}
+
+.bio-sect .project-sect{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: start;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+
+.carousel-base{
+    height: 25rem;
+}
+
+.carousel-slide{
+    width: 100%;
+    flex-shrink: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.carousel-slide.active{
+    visibility: visible;
+    position: relative;
+}
+
+.carousel-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Carousel Control Visuals */
+
+.carousel-left, .carousel-right{
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0.25rem 0.75rem;
+    padding-top : 0px;
+    cursor: pointer;
+    position: relative;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 4px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.carousel-dot.active {
+    background-color: grey;
+}
+
+.carousel-dot:hover {
+    background-color: grey;
+}
+
+.image-controls{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.image-controls button:hover{
+    background-color: #fff;
+    color: #333;
+}
+
+/* Project Description Placement */
+
+.project-sect .project-description{
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    width: auto;
+    margin: 0;
+}
+
+/* Photo Segment Gallery Grid */
+
+.cell-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    object-position: center;
+    gap: 10px;
+}
+
+.cell-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+    border: 0.05px solid #fff;
+}
+
+
+.band-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.member-bio-left, .member-bio-right{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 3rem;
+}
+
+.member-bio-left img{
+    height: 25rem;
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.member-bio-left{
+    margin: 0;
+}
+
+.member-bio-right img{
+    flex-direction: row-reverse;
+    height: 25rem;
+    margin-left: 4rem;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.contact-page {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns:  1fr 1fr;
+    grid-template-rows: auto auto auto;
+    
+    justify-content: center;
+    align-content: center;
+
+    row-gap: 0.5rem;
+    background-color: #333;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.contact-page div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-header{
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.contact-page img {
+    max-width: 100%;
+    height: 15rem;
+    object-fit: contain;
+}
+
+.contact-page h1 {
+    margin-bottom: 1rem;
+}
+
+.contact-page p{
+    margin-top: 0;
+}
+
+.contact-page a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact-page a:hover{
+    text-decoration: underline;
+}
+
+
+
+/* Mobile Elements */
+
+/* Vertical */
+@media (max-width: 600px){
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .home-page p.overlay-a,
+    .home-page p.overlay-b,
+    .home-page p.overlay-c {
+        font-size: 1.5rem; /* Smaller font for mobile */
+        width: 40%; /* Full width for mobile */
+    }
+    .text-overlay-a {
+        top: 25%;
+        left: 35%;
+    }
+    .text-overlay-b {
+        top: 60%;
+        left: 110%;
+        width: 141%;
+    }
+    .text-overlay-c {
+        top: 75%;
+        left: 105%;
+        width: 190%;
+    }
+    .my-menu b.menu-title,
+    .my-menu a,
+    .my-menu b {
+        font-size: 17px; /* Smaller menu font */
+    }
+
+    .bio-menu{
+        width:auto;
+        font-size: 16px;
+    }
+
+    .bio-menu a{
+        margin-right: 20px;
+    }
+
+    .bio-sect h1{
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .bio-sect p {
+        font-size: 14px;
+    }
+
+    .carousel-base{
+        height: 17rem;
+    }
+
+    section#image-carousel{
+        margin: 0;
+    }
+
+    .member-bio-left, .member-bio-right{
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        align-items: center;
+        text-align: left;
+    }
+
+    .member-bio-left img{
+        justify-self: center;
+        margin-left: 0;
+    }
+
+    .member-bio-right img{
+        justify-self: center;
+        margin-left: 0;
+        grid-row: 1;
+    }
+
+    .member-text{
+        font-size: 0rem;
+    }
+
+    .contact-page{
+        grid-row: 1;
+    }
+
+}
